@@ -1,5 +1,5 @@
 import React, { useState, useCallback, useRef } from 'react';
-import { produce } from 'immer'; // Corrected import
+import { produce } from 'immer';
 
 const numRows = 50;
 const numCols = 50;
@@ -18,7 +18,7 @@ const operations = [
 const generateEmptyGrid = () => {
   const rows = [];
   for (let i = 0; i < numRows; i++) {
-    rows.push(Array.from(Array(numCols), () => 0));
+    rows.push(Array.from(Array(numCols), () => (Math.random() > 0.7 ? 1 : 0)));
   }
 
   return rows;
